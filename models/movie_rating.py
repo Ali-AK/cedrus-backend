@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, ForeignKey
 
 from database import Base, session
 from .user import User
-from .movie import Movie
 
 
 class MovieRating(Base):
@@ -17,6 +16,6 @@ class MovieRating(Base):
         user = session.query(User).filter(User.id == self.user_id).first()
         return user.username
 
-    def get_movie_by_id(self):
-        movie = session.query(Movie).filter(Movie.id == self.movie_id).first()
-        return movie.title
+    # def get_movie_by_id(self):
+    #     movie = session.query(Movie).filter(Movie.id == self.movie_id).first()
+    #     return movie.title

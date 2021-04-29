@@ -13,7 +13,7 @@ def get_all_movies():
         {
             'id': rating.id,
             'movie_id': rating.movie_id,
-            'movie': rating.get_movie_by_id(),
+            # 'movie': rating.get_movie_by_id(),
             'user_id': rating.user_id,
             'user': rating.get_user_by_id()
         }
@@ -29,7 +29,7 @@ def create_movie():
     if data is None:
         return make_response(jsonify({'message': 'error submitting rating, body is required', 'status': 500}), 500)
 
-    rating = MovieRating(movie_id=data['movie_id'], user_id=data['user_id'])
+    rating = MovieRating(movie_id=data['movie_id'], user_id=data['user_id'], rating=data['rating'])
 
     session.add(rating)
 

@@ -14,7 +14,8 @@ def get_all_movies():
             'id': movie.id,
             'title': movie.title,
             'description': movie.description,
-            'genre': movie.get_genre_by_id()
+            'genre': movie.get_genre_by_id(),
+            'rating': movie.get_rating_by_id()
         }
         for movie in movies]
 
