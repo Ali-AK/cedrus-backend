@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.register_blueprint(routes.movies_router)
 app.register_blueprint(routes.genres_router)
 app.register_blueprint(routes.users_router)
+app.register_blueprint(routes.movie_ratings_router)
 
 if __name__ == '__main__':
     app.run()
