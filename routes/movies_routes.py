@@ -38,7 +38,7 @@ def create_movie():
     except Exception as e:
         return make_response(jsonify({'message': 'error creating movie, {}'.format(str(e)), 'status': 500}), 500)
 
-    return make_response(jsonify({'movie': movie, 'message': 'movie created', 'status': 201}), 201)
+    return make_response(jsonify({'message': 'movie created', 'status': 201}), 201)
 
 
 @movies_router.route('/populate', methods=["POST"])
