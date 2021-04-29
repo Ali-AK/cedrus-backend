@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Interstellar",
+        "genre_id": 1,
+        "description": "Interstellar is a 2014 British-American epic science fiction film directed and produced by Christopher Nolan. It stars Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, John Lithgow, Michael Caine, and Matt Damon."
+    },
+    {
+        "title": "Inception",
+        "genre_id": 1,
+        "description": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan, who also produced the film with his wife, Emma Thomas. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets."
+    },
+    {
+        "title": "Lord of the Rings: The return of the king",
+        "genre_id": 1,
+        "description": "The former Fellowship members prepare for the final battle. While Frodo and Sam approach Mount Doom to destroy the One Ring, they follow Gollum, unaware of the path he is leading them to."
+    },
+        {
+        "title": "The hangover",
+        "genre_id": 4,
+        "description": "The Hangover is a trilogy of American comedy films created by Jon Lucas and Scott Moore, and directed by Todd Phillips. All three films follow the misadventures of a quartet of friends who go on their road trip to attend a bachelor party."
+    }
+]
