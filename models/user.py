@@ -13,7 +13,7 @@ class User(Base):
     username = Column(String, nullable=False)
     password_hash = Column(String, nullable=False)
 
-    # user_rating = relationship("Rating")
+    user_rating = relationship("MovieRating")
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
