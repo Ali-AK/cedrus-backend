@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # insert connection string here
+# The format is: postgresql://<username>:<password>@<host>:<port>/<database name>
 SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost:5433/testDb'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
