@@ -29,7 +29,7 @@ def create_movie():
     if data is None:
         return make_response(jsonify({'message': 'error creating movie, body is required', 'status': 500}), 500)
 
-    movie = Movie(title=data['title'])
+    movie = Movie(title=data['title'], description=data['description'], genre_id=data['genre_id'])
 
     session.add(movie)
 
@@ -58,3 +58,21 @@ def populate_movies():
         return make_response(jsonify({'message': 'error populating movies, {}'.format(str(e)), 'status': 500}), 500)
 
     return make_response(jsonify({'message': 'movies populated', 'status': 201}), 201)
+
+
+@movies_router.route('/<movie_id>', methods=['DELETE'])
+def delete_movie(movie_id):
+
+    movie = session.query(Movie).filter(Movie.movie_id == movie_id).first()
+
+    if not movie:
+        return make_response(jsonify({'response': 'Movie not found', 'status': 404}))
+
+    session.delete(movie)
+
+    try:
+        session.commit()
+    except Exception as e:
+        return make_response(jsonify({'Error': 'Movie was not deleted', 'status': 500}), 500)
+
+    return make_response(jsonify({'response': 'Movie has been deleted', 'status': 200}), 200)

@@ -13,7 +13,7 @@ class Movie(Base):
     description = Column(String, nullable=False)
     genre_id = Column(Integer, ForeignKey("genres.id"))
 
-    movie_rating = relationship("MovieRating")
+    movie_rating = relationship("MovieRating", cascade="all,delete")
 
     def get_genre_by_id(self):
         genre = session.query(Genre).filter(Genre.id == self.genre_id).first()
