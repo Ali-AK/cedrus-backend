@@ -63,7 +63,7 @@ def populate_movies():
 @movies_router.route('/<movie_id>', methods=['DELETE'])
 def delete_movie(movie_id):
 
-    movie = session.query(Movie).filter(Movie.movie_id == movie_id).first()
+    movie = session.query(Movie).filter(Movie.id == movie_id).first()
 
     if not movie:
         return make_response(jsonify({'response': 'Movie not found', 'status': 404}))
